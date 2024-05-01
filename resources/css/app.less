@@ -1,0 +1,68 @@
+:root{
+    --main-color-ligth: #1697B4;
+    --main-color-dark: #0E6278;
+}
+.btn {
+    margin-left: 0.5rem;
+}
+html{
+    body{
+
+        @media (prefers-color-scheme: dark){
+            .dark\:bg-gray-900{
+                background: rgb(14,98,120);
+                background: linear-gradient(90deg, rgba(22,151,180,1) 0%, rgba(14,98,120,1) 30%, rgba(14,98,120,1) 70%, rgba(22,151,180,1) 100%);
+            }
+            input{
+                background: white !important ;
+                color: #333 !important;
+            }
+
+        }
+        .table td{
+            vertical-align: middle;
+        }
+        .actions-buttons{
+            width: 22%;
+        }
+        .form-modals{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            .btn-y{
+                @apply font-bold py-2 px-4 rounded;
+            }
+        }
+
+        .modal {
+            &-title{
+                font-size: 1.2rem;
+                padding: 1rem;
+                text-transform: uppercase;
+                background-image: linear-gradient(to left, #fff, #333);
+                background-position: bottom;
+                background-size: 100% 2px; /* Ancho y alto de la línea */
+                background-repeat: no-repeat;
+            }
+            &-body{
+   
+            }
+            .btn-close{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: -0.9rem;
+                right: -0.9rem;
+                background-color: white;
+                border: 1px solid #000;
+                border-radius: 25px;
+                font-size: 1rem;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+    }
+}
